@@ -109,11 +109,6 @@ namespace InformacijosSaugumas
                 {
                     int decryptedCharValue = ((charValue - 32) - (key[keyIndex % key.Length] - 32) + 95) % 95 + 32;
 
-                    // Handle wrap-around 
-                    //if (decryptedCharValue < 32)
-                    //{
-                        //decryptedCharValue += 95;
-                    //}
 
                     decryptedText += (char)decryptedCharValue;
                     keyIndex++;
